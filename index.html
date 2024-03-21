@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+b650    </head>
+
+    <body class="body">
+
+        <div class="chat-container">
+            <div class="bot-text-container">
+                <div class="text bot">
+                    Hi, I'm MyGPT, the AI powered chatbot.
+                </div>
+            </div>
+            <div class="user-text-container">
+                <div class="text user">
+                    Can you find for me...
+                </div>
+            </div>
+            <div class="bot-text-container">
+                <div class="text bot">
+                    Here are the results of my research...
+                </div>
+            </div>
+            <div class="bot-text-container">
+                <div class="text bot">
+                    May I help you with anything else?
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-text">Type your question here</div>
+            <img src="send.png" height="20px" style="opacity: 0.4;">
+        </div>
+
+    </body>
+
+    <script>
+        const botElements = document.getElementsByClassName("bot");
+        for (let i=0; i < botElements.length; i++) {
+            const botEl = botElements[i];
+            
+            const imgEl = document.createElement("img");
+            imgEl.setAttribute("src", "Chatbot.png");
+            imgEl.setAttribute("height", "30");
+            imgEl.setAttribute("width", "30");
+
+            botEl.parentNode.insertBefore(imgEl, botEl);
+        };
+    </script>
+</html>

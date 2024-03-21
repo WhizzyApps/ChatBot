@@ -1,0 +1,46 @@
+.body {
+    width: fit-content; border: 1px solid grey; border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+}
+
+.chat-container {
+    margin: 1rem .5rem;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-text-container {
+    display: flex;
+    align-items: end;
+}
+.user-text-container {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+}
+.text {
+    border-radius: 4px;
+    padding: 5px;
+    width: fit-content;
+    max-width: 12rem;
+    margin: 0.5rem 0;
+}
+.bot {
+    background-color: aliceblue;
+}
+.user {
+    background-color: rgb(158, 183, 251);
+}
+
+.input-container {
+    border-top: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
