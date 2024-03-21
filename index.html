@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
     <head>
         <link rel="stylesheet" href="styles.css">
 </head>
@@ -53,6 +53,29 @@
 
             newUserInput_containerEl.appendChild(newUserInput_textEl);
             document.getElementsByClassName("chat-container")[0].appendChild(newUserInput_containerEl);
+
+            // add classes for display in side bar
+            document.getElementsByClassName("body")[0].classList.add("body-max");
+            document.getElementsByClassName("chat-container")[0].classList.add("chat-container-max");
+            
+            const botElements = document.getElementsByClassName("bot");
+            for (let i=0; i < botElements.length; i++) {
+                const botEl = botElements[i];
+                botEl.classList.add("bot-max");
+            };
+            const userElements = document.getElementsByClassName("user");
+            for (let i=0; i < userElements.length; i++) {
+                const userEl = userElements[i];
+                userEl.classList.add("user-max");
+            };
+            const textElements = document.getElementsByClassName("text");
+            for (let i=0; i < textElements.length; i++) {
+                const textEl = textElements[i];
+                textEl.classList.add("text-max");
+            };
+
+            document.getElementsByClassName("input-container")[0].classList.add("input-container-max");
+            document.getElementsByClassName("user-input")[0].classList.add("user-input-max");
 
         }
 
