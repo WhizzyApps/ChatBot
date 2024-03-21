@@ -9,29 +9,16 @@
         <div class="chat-container">
             <div class="bot-text-container">
                 <div class="text bot">
-                    Hi, I'm MyGPT, the AI powered chatbot.
-                </div>
-            </div>
-            <div class="user-text-container">
-                <div class="text user">
-                    Can you find for me...
-                </div>
-            </div>
-            <div class="bot-text-container">
-                <div class="text bot">
-                    Here are the results of my research...
-                </div>
-            </div>
-            <div class="bot-text-container">
-                <div class="text bot">
-                    May I help you with anything else?
+                    Hi, I'm MyGPT, the AI powered chatbot. How can I help you?
                 </div>
             </div>
         </div>
 
         <div class="input-container">
-            <div class="input-text">Type your question here</div>
-            <img src="send.png" height="20px" style="opacity: 0.4;">
+            <input id="user-input" class="user-input" type="text" placeholder="Type your question here"></input>
+            <button onclick="handleSendButton()" class="sendButton">
+                <img src="send.png" height="20px" style="opacity: 0.4;">
+            </button>
         </div>
 
     </body>
@@ -48,5 +35,26 @@
 
             botEl.parentNode.insertBefore(imgEl, botEl);
         };
+        let inputEl = document.getElementById("user-input");
+        inputEl.addEventListener("keypress", (event) => {
+            if (event.key === 'Enter') {handleSendButton();}
+        });
+
+        const handleSendButton = () => {
+            const inputValue = inputEl.value;
+            inputEl.value = "";
+
+            // add input text to chat
+            let newUserInput_containerEl = document.createElement("div");
+            newUserInput_containerEl.setAttribute("class", "user-text-container");
+            let newUserInput_textEl = document.createElement("div");
+            newUserInput_textEl.setAttribute("class", "text user");
+            newUserInput_textEl.innerHTML = inputValue;
+
+            newUserInput_containerEl.appendChild(newUserInput_textEl);
+            document.getElementsByClassName("chat-container")[0].appendChild(newUserInput_containerEl);
+
+        }
+
     </script>
 </html>

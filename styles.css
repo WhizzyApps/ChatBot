@@ -1,15 +1,13 @@
 .body {
-    width: fit-content; border: 1px solid grey; border-radius: 5px;
+    border: 1px solid grey; border-radius: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px;
 }
 
 .chat-container {
     margin: 1rem .5rem;
-    width: 16rem;
     display: flex;
     flex-direction: column;
 }
@@ -43,4 +41,22 @@
     justify-content: space-between;
     align-items: center;
     padding: .5rem;
+    gap: 5px;
+}
+.user-input {
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    min-width: 2rem;
+}
+
+.user-input:focus {
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+.sendButton {
+    background: none;
+    border: 1px solid grey;
+    border-radius: 4px;
 }
